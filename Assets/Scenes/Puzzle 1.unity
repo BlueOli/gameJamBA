@@ -6007,13 +6007,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 405774981}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1492667761}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 2072512106}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &440066401
 GameObject:
@@ -6508,6 +6508,17 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   interactionPromptUI: {fileID: 1449259932}
+--- !u!114 &593958153 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5629562699589646999, guid: 786130035bc4d3441a2a9e3c1a26b801, type: 3}
+  m_PrefabInstance: {fileID: 203186866}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2b618f6ff8de3b448a65fdfeb715e7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RootSegment
 --- !u!1 &594862933
 GameObject:
   m_ObjectHideFlags: 0
@@ -6712,7 +6723,7 @@ Transform:
   m_GameObject: {fileID: 847083745}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.09}
   m_LocalScale: {x: 1.25, y: 1.5, z: 1.25}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -12546,8 +12557,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4ffe341b5bbe574298a419b98d62704, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnergyFlowManager
-  segments: []
-  nodes: []
+  segments:
+  - {fileID: 546385498745502002}
+  - {fileID: 6925875051503863311}
+  - {fileID: 1773748152}
+  - {fileID: 593958153}
+  nodes:
+  - {fileID: 1892417049}
+  - {fileID: 462089309}
   cellSize: 2
   treeController: {fileID: 353926201}
 --- !u!4 &1773748150 stripped
@@ -12555,6 +12572,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6831254102774286494, guid: 786130035bc4d3441a2a9e3c1a26b801, type: 3}
   m_PrefabInstance: {fileID: 1297455357}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1773748152 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5629562699589646999, guid: 786130035bc4d3441a2a9e3c1a26b801, type: 3}
+  m_PrefabInstance: {fileID: 1297455357}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2b618f6ff8de3b448a65fdfeb715e7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RootSegment
 --- !u!1 &1792805742
 GameObject:
   m_ObjectHideFlags: 0
@@ -13166,6 +13194,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 405774982}
   - {fileID: 523306362}
   - {fileID: 230213872}
   - {fileID: 918039328}
@@ -13260,6 +13289,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6831254102774286494, guid: 786130035bc4d3441a2a9e3c1a26b801, type: 3}
   m_PrefabInstance: {fileID: 546385498745501999}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &546385498745502002 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5629562699589646999, guid: 786130035bc4d3441a2a9e3c1a26b801, type: 3}
+  m_PrefabInstance: {fileID: 546385498745501999}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2b618f6ff8de3b448a65fdfeb715e7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RootSegment
 --- !u!1001 &6925875051503863305
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13362,11 +13402,21 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.9, y: 0.3, z: 1.5}
   m_Center: {x: 0.3, y: 0, z: 0}
+--- !u!114 &6925875051503863311 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8953776965253180755, guid: 5dfd687e56dd19548bf2bf2720326cbe, type: 3}
+  m_PrefabInstance: {fileID: 6925875051503863305}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 115329474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2b618f6ff8de3b448a65fdfeb715e7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RootSegment
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 405774982}
   - {fileID: 860892824}
   - {fileID: 594862934}
   - {fileID: 2072512106}
