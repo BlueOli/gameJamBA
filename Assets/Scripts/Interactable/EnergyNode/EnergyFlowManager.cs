@@ -13,6 +13,8 @@ public class EnergyFlowManager : MonoBehaviour
 
     [Header("Feedback de Árbol")]
     [SerializeField] private TreeEnergyController treeController;
+    [SerializeField] private GameObject pathBlocked;     // raíces cerrando el paso
+    [SerializeField] private GameObject pathOpened;      // raíces abiertas / pasarela
 
     private EnergyNode sourceNode;
     private List<EnergyNode> targetNodes = new List<EnergyNode>();
@@ -331,6 +333,14 @@ public class EnergyFlowManager : MonoBehaviour
         }
         // TODO: encender árbol, partículas, sonido, etc.
         // Podés referenciar acá al árbol visual del nivel.
+
+        if (pathBlocked != null) pathBlocked.SetActive(false);
+        if (pathOpened != null) pathOpened.SetActive(true);
+
+        foreach(RootSegment segment in segments)
+        {
+            segment.gameObject.layer = LayerMask.NameToLayer("IgnoreInteractable");
+        }
     }
 
     private void OnFlowBroken()

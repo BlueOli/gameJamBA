@@ -304,6 +304,14 @@ PrefabInstance:
       propertyPath: interactionText
       value: Interact Pedestal
       objectReference: {fileID: 0}
+    - target: {fileID: 444928768213653738, guid: 4b10b85b4f8855047a91271881e95659, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 19314dc77de53144589434df2137beef, type: 2}
+    - target: {fileID: 444928768213653738, guid: 4b10b85b4f8855047a91271881e95659, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 487527ed66b930044bea2b26cc3fa3e4, type: 2}
     - target: {fileID: 1517149612564212146, guid: 4b10b85b4f8855047a91271881e95659, type: 3}
       propertyPath: m_Name
       value: EnergyPedestal
@@ -6235,7 +6243,6 @@ GameObject:
   - component: {fileID: 408355160}
   - component: {fileID: 408355159}
   - component: {fileID: 408355158}
-  - component: {fileID: 408355157}
   m_Layer: 6
   m_Name: Bridge
   m_TagString: Untagged
@@ -6258,32 +6265,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1997339450}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &408355157
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 408355155}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ba83c3d79d579b4ba60f2f98e25293c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnergyPlatform
-  isActive: 1
-  isAligned: 0
-  platformRenderer: {fileID: 408355159}
-  offEmissionColor: {r: 0, g: 0, b: 0, a: 1}
-  onEmissionColor: {r: 0, g: 2, b: 2, a: 1}
-  alignTarget: {fileID: 0}
-  moveSpeed: 2
-  alignThreshold: 0.01
-  alignOnlyY: 1
-  enableVibration: 1
-  vibrationAmplitude: 0.05
-  vibrationFrequency: 20
-  liftParticles: {fileID: 0}
-  liftAudio: {fileID: 0}
 --- !u!65 &408355158
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6559,7 +6540,7 @@ Transform:
   - {fileID: 832622438}
   - {fileID: 1274046640}
   - {fileID: 601139696}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 2072512106}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &523157543
 GameObject:
@@ -8668,8 +8649,8 @@ MonoBehaviour:
   isActive: 1
   isAligned: 1
   platformRenderer: {fileID: 1074160092}
-  offEmissionColor: {r: 0, g: 0, b: 0, a: 1}
-  onEmissionColor: {r: 0, g: 0.50980395, b: 0.50980395, a: 1}
+  offEmissionColor: {r: 0.2, g: 0.10980392, b: 0.36862746, a: 1}
+  onEmissionColor: {r: 0.654902, g: 0.45490196, b: 0.8666667, a: 1}
   alignTarget: {fileID: 0}
   moveSpeed: 2
   alignThreshold: 0.01
@@ -14243,7 +14224,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -8490553706972085774, guid: 120f32ebf63902241ab9161433fcbfb3, type: 3}
+  - {fileID: 2100000, guid: 1a0cb642bea22ff46ad24b233c7e51d4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -15613,6 +15594,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7990614611600178775, guid: 8ec284afcf86bd0418ab0dc63f1f1bdc, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 1a0cb642bea22ff46ad24b233c7e51d4, type: 2}
     - target: {fileID: 8096219658795136778, guid: 8ec284afcf86bd0418ab0dc63f1f1bdc, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -25438,7 +25423,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -8490553706972085774, guid: 120f32ebf63902241ab9161433fcbfb3, type: 3}
+  - {fileID: 2100000, guid: 1a0cb642bea22ff46ad24b233c7e51d4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -25909,8 +25894,8 @@ MonoBehaviour:
   isActive: 1
   isAligned: 1
   platformRenderer: {fileID: 1809042649}
-  offEmissionColor: {r: 0, g: 0, b: 0, a: 1}
-  onEmissionColor: {r: 0, g: 0.50980395, b: 0.50980395, a: 1}
+  offEmissionColor: {r: 0.2, g: 0.10980392, b: 0.36862746, a: 1}
+  onEmissionColor: {r: 0.654902, g: 0.45490196, b: 0.8666667, a: 1}
   alignTarget: {fileID: 1074160090}
   moveSpeed: 2
   alignThreshold: 0.01
@@ -26945,6 +26930,7 @@ Transform:
   - {fileID: 918039328}
   - {fileID: 1997339450}
   - {fileID: 824469495}
+  - {fileID: 495220791}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2091169747 stripped
@@ -27039,7 +27025,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -8490553706972085774, guid: 120f32ebf63902241ab9161433fcbfb3, type: 3}
+  - {fileID: 2100000, guid: 1a0cb642bea22ff46ad24b233c7e51d4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -27077,4 +27063,3 @@ SceneRoots:
   - {fileID: 860892824}
   - {fileID: 594862934}
   - {fileID: 2072512106}
-  - {fileID: 495220791}

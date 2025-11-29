@@ -11,8 +11,13 @@ public class TopDownCameraFollow : MonoBehaviour
     [Header("Suavizado")]
     [SerializeField] private float followSpeed = 5f;
 
+    public CinematicCameraController cinematicCam;
+
     private void LateUpdate()
     {
+        if (cinematicCam != null && cinematicCam.IsPlayingCinematic())
+            return;
+
         if (target == null) return;
 
         // Posición deseada (target + offset en espacio de mundo)

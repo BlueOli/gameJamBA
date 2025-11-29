@@ -17,10 +17,17 @@ public class PlayerMovement : MonoBehaviour
     [Header("Referencia de cámara")]
     [SerializeField] private Transform cameraTransform;
 
+    [Header("Debug / Teleport")]
+    [SerializeField] private bool debugTeleportEnabled = true;
+    [SerializeField] private Transform debugTeleportTarget;
+    [SerializeField] private float teleportYOffset = 1.0f;
+
     private CharacterController controller;
     private float turnSmoothVelocity;
     private Vector3 velocity;
     private bool isGrounded;
+
+    public bool canMove = true;
 
     private void Awake()
     {
@@ -29,6 +36,13 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        if (debugTeleportEnabled && Input.GetKeyDown(KeyCode.P))
+        {
+            TeleportToDebugPoint();
+        }
+
+        if (!canMove) return;
+
         HandleMovement();
         HandleGravityAndJump();
     }
@@ -103,5 +117,29 @@ public class PlayerMovement : MonoBehaviour
 
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(groundCheckPoint.position, groundCheckRadius);
+    }
+
+    private void TeleportToDebugPoint()
+    {
+        if (debugTeleportTarget == null)
+        {
+            Debug.LogWarning("[PlayerController] Debug teleport: no hay debugTeleportTarget asignado.");
+            return;
+        }
+
+        Vector3 dest = debugTeleportTarget.position + Vector3.up * teleportYOffset;
+
+        if (controller != null)
+        {
+            controller.enabled = false;
+            transform.position = dest;
+            controller.enabled = true;
+        }
+        else
+        {
+            transform.position = dest;
+        }
+
+        Debug.Log("[PlayerController] Teleport debug a: " + debugTeleportTarget.name);
     }
 }

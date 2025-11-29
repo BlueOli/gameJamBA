@@ -5880,8 +5880,8 @@ MonoBehaviour:
   - {fileID: 1480086187}
   - {fileID: 1477546636}
   - {fileID: 2042935876}
-  offEmissionColor: {r: 0, g: 0.1, b: 0.1, a: 1}
-  onEmissionColor: {r: 0, g: 0.7490196, b: 0.7490196, a: 1}
+  offEmissionColor: {r: 0.11764706, g: 0.06666667, b: 0.23137255, a: 1}
+  onEmissionColor: {r: 0.5411765, g: 0.3529412, b: 0.8117647, a: 1}
   loopParticles: {fileID: 905933938}
   activationParticles: {fileID: 223216413}
   audioSource: {fileID: 353926202}

@@ -55,8 +55,8 @@ MonoBehaviour:
   segmentsRenderer:
   - {fileID: 7111958409770438588}
   - {fileID: 2819487302286658995}
-  baseEmissionColor: {r: 0, g: 0.5, b: 0.5, a: 1}
-  poweredEmissionColor: {r: 0, g: 2, b: 2, a: 1}
+  baseEmissionColor: {r: 0.11764706, g: 0.06666667, b: 0.23137255, a: 1}
+  poweredEmissionColor: {r: 0.49411765, g: 0.90588236, b: 1, a: 1}
   audioSource: {fileID: 0}
   rotateClip: {fileID: 8300000, guid: 8616480c0bd591e4fb7deb9f2f4e0749, type: 3}
 --- !u!65 &7662719829252829340

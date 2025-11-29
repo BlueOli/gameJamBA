@@ -55,11 +55,12 @@ public class TreeEnergyController : MonoBehaviour
         if (leafRenderers == null) return;
 
         Color emission = isOn ? onEmissionColor : offEmissionColor;
+        float scale = isOn ? 2f : 1f;
 
         foreach (Renderer renderer in leafRenderers)
         {
             var mat = renderer.material;
-            mat.SetColor(EmissionColorID, emission);
+            mat.SetColor(EmissionColorID, emission*scale);
         }        
     }
 
